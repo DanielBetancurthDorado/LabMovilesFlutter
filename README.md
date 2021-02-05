@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       title: 'Welcome to Flutter',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Welcome to Flutter'),
+          title: Text('Getting to know my TAs'),
         ),
         body: Center(
           child: Text('Hello World'),
@@ -113,6 +113,23 @@ void change() {
 ```dart
 import 'package:flutter/material.dart';
 
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Welcome to Flutter'),
+        ),
+        body: Counter(),
+      ),
+      );
+  }
+}
+
 class Counter extends StatefulWidget {
   _CounterState createState() => _CounterState();
 }
@@ -149,24 +166,5 @@ class _CounterState extends State<Counter> {
         ),
       );
   }
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Counter(),
-      ),
-      );
-  }
-}
-
-void main() {
-  runApp(MyApp());
 }
 ```
