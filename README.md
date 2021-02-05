@@ -76,6 +76,37 @@ children: <Widget>[
 ]
 ```
 
+## Step 5
+```dart
+children: <Widget>[
+    Image.network('https://raw.githubusercontent.com/caev03/LabMovilesFlutter/master/TAs/###.jpg'),
+    MaterialButton(
+      color: Theme.of(context).primaryColor,
+      child: Text(
+        'Add',
+        style: TextStyle(color: Colors.white),
+      ),
+      onPressed: () => change(),
+    ),
+]
+```
+
+## Step 6
+```dart
+int val;
+
+void initState(){
+    super.initState();
+    val = 0;
+}
+
+void change() {
+    setState(() {
+      val += 1;
+      val = val%4;
+    });
+}
+```
 
 ## Final Step
 
@@ -130,6 +161,7 @@ class MyApp extends StatelessWidget {
           title: Text('Welcome to Flutter'),
         ),
         body: Counter(),
+      ),
       );
   }
 }
